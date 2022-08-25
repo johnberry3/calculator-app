@@ -3,12 +3,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="calc.css">
+    <title>calculator</title>
+    <script src="calc.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <table class="">
+
+        <div class="calculator">
+            <div class="toggle-container">
+                <input type="checkbox" class="checkbox" id="chk"/>
+	            <label class="label" for="chk">
+                    <div class="moon-div">
+                         <img src="assets/moon-and-star.svg" alt="darkmode" class="moon">
+                    </div>
+                    <div class="sun-div">
+                        <img src="assets/weather-sunny.svg" alt="lightmode" class="sun">
+                    </div>
+
+                <div class="ball"></div>
+                </label>
+            </div>
+        <table class="display-bar">
             <tr>
                 <td colspan="3"><input type="text" id="result" class="screen " style="text-align: right;"></td>
                 <td><input type="button" value="C" onclick="clearscreen()" class="clear "></td>
@@ -31,11 +50,8 @@
             <input type="button"  class="button"value="." onclick="display('.')">
             <input type="button"  class="button equal-sign" value="=" onclick="solve()">
             <input type="button"  class="operator ml-2"value="+" onclick="display('+')">
-    
-
-
-
         </div>
+    </div>
 
     </div>
    <script src="js\jquery\calc.js"></script>
