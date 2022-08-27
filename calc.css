@@ -1,12 +1,21 @@
 :root {
   --error-color: #dc3545;
   --success-color: #28a745;
+  --color-light-purple: rgba(150, 137, 224, 0.829);
+  --color-dark-purple: rgba(13, 10, 31, 0.829);
+  --color-dark-blue: rgba(45, 11, 240, 0.829);
 }
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto Slab", serif;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 .container {
@@ -25,14 +34,11 @@
 
 .calculator {
   position: relative;
-  height: 50vh; 
-  width: 40rem;
- /* width: 30rem; */
-  padding: 20px;
+  width: 50rem;
+  padding: 4rem 4rem 10rem 2rem;
   border-radius: 10px;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
 }
@@ -41,6 +47,7 @@
   display: flex;
   align-self: stretch;
   justify-content: flex-end;
+  padding-bottom: 5rem;
 }
 
 .checkbox {
@@ -50,7 +57,7 @@
 
 .label,
 .checkbox:checked + .label {
-  background-color: #292c35;
+  background-color: var(--color-dark-purple);
   border-radius: 50px;
   cursor: pointer;
   display: flex;
@@ -87,57 +94,114 @@
 
 .dark {
   background: #292c35;
+  /* background: #101b3afa; */
 }
-/*
-.keys{
+
+.display-bar {
+  display: flex;
+  align-self: stretch;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.clear {
+  min-width: 4rem;
+}
+
+.screen {
+  width: 21rem;
+  /* height: 7rem; */
+  border: none;
+  border-bottom: 2px solid var(--color-light-purple);
+
+  border-radius: 5px;
+  color: var(--color-dark-blue);
+  margin-right: 1rem;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  padding-bottom: 0.2rem;
+  padding-right: 0.5rem;
+}
+
+.dark .screen {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid var(--color-dark-blue);
+}
+
+.keys {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 15px;
+  grid-template-columns: repeat(4, minmax(4rem, 6rem));
+  grid-gap: 1rem;
+}
+
+.button,
+.clear {
+  font-size: 1.5rem;
+  height: 4rem;
+  border: 1px solid var(--color-light-purple);
+  box-shadow: 0 0 0.5rem var(--color-light-purple);
+  border-radius: 5px;
+  color: var(--color-dark-blue);
+  background-color: rgba(250, 236, 236, 0.363);
+  transition: transform 0.1s;
+}
+
+.button:hover,
+.clear:hover {
+  background-color: rgba(250, 236, 236, 0.664);
+  transform: scale(1.05);
+}
+
+/* 
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(5rem, 10rem));
+  grid-gap: 1rem;
   margin: auto;
   width: 20rem;
 }
-.button{
+.button {
   display: flex;
   align-items: flex-start;
   position: relative;
   border: 1px solid #ccc;
   margin-top: 15px;
-   padding: 10px;
-   border-radius: 5px;
-   box-shadow: #ccc;
-   margin-top: 10px;
-   border-color: transparent;
-   font-size: 1.5em;
-   color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: #ccc;
+  margin-top: 10px;
+  border-color: transparent;
+  font-size: 1.5em;
+  color: #333;
 }
-.operator{
-  color:#fff;
+.operator {
+  color: #fff;
   background-color: #eebb24;
   font-size: 2em;
   margin-top: 10px;
-
 }
-.clear{
+.clear {
   background-color: #f0595f;
   border-color: #b0353a;
   color: #fff;
   width: 80px;
   height: 30px;
 }
-.clear:hover{
+.clear:hover {
   background-color: #f17377;
-  
 }
-.equal-sign{
+.equal-sign {
   background-color: #25a8e0;
   border-color: #25a8e0;
   color: #fff;
 }
-.equal-sign:hover{
+.equal-sign:hover {
   background-color: #4e9ed4;
 }
 
-.screen{
+.screen {
   background-color: rgb(171, 219, 231);
   justify-content: left;
   color: black;
@@ -149,6 +213,4 @@
   margin: auto;
   margin-bottom: 10px;
   margin-top: 10px;
-}
-*/
-
+} */
