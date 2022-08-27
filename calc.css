@@ -116,6 +116,10 @@ html {
   border-radius: 5px;
   color: var(--color-dark-blue);
   margin-right: 1rem;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  padding-bottom: 0.2rem;
+  padding-right: 0.5rem;
 }
 
 .dark .screen {
