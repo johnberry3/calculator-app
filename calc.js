@@ -6,7 +6,7 @@ chk.addEventListener("change", () => {
   calculator.classList.toggle("dark");
 });
 
-/*
+
 function display(val){
   document.getElementById('result').value += val;
   return val;
@@ -24,4 +24,4 @@ function solve(){
 function clearscreen(){
   document.getElementById('result').value = "";
 }
-*/
+

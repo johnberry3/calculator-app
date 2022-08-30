@@ -111,9 +111,8 @@ html {
 .screen {
   width: 21rem;
   /* height: 7rem; */
-  border: none;
+  border: 1px solid rgb(171, 219, 231);
   border-bottom: 2px solid var(--color-light-purple);
-
   border-radius: 5px;
   color: var(--color-dark-blue);
   margin-right: 1rem;
@@ -124,6 +123,7 @@ html {
 }
 
 .dark .screen {
+  border:4px solid blue;
   background-color: transparent;
   box-shadow: none;
   border: none;
@@ -148,10 +148,34 @@ html {
   transition: transform 0.1s;
 }
 
-.button:hover,
-.clear:hover {
+.button:hover {
   background-color: rgba(250, 236, 236, 0.664);
   transform: scale(1.05);
+}
+.operator {
+  color: #fff;
+  background-color: #eebb24;
+  font-size: 2em;
+  margin-top: px;
+}
+.operator:hover{
+  background-color: #e7c459;
+}
+.equal-sign {
+  background-color: #25a8e0;
+  border-color: #25a8e0;
+  color: #fff;
+}
+.equal-sign:hover {
+  background-color: #4e9ed4;
+}
+.clear {
+  background-color: #f0595f;
+  border-color: #b0353a;
+  color: #fff;
+}
+.clear:hover {
+  background-color: #f17377;
 }
 
 /* 
@@ -176,12 +200,7 @@ html {
   font-size: 1.5em;
   color: #333;
 }
-.operator {
-  color: #fff;
-  background-color: #eebb24;
-  font-size: 2em;
-  margin-top: 10px;
-}
+
 .clear {
   background-color: #f0595f;
   border-color: #b0353a;
@@ -192,14 +211,7 @@ html {
 .clear:hover {
   background-color: #f17377;
 }
-.equal-sign {
-  background-color: #25a8e0;
-  border-color: #25a8e0;
-  color: #fff;
-}
-.equal-sign:hover {
-  background-color: #4e9ed4;
-}
+
 
 .screen {
   background-color: rgb(171, 219, 231);
