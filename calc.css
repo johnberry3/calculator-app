@@ -24,12 +24,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*position:absolute;
-  padding: 15px;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);*/
-  
 }
 
 .calculator {
@@ -41,6 +35,10 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.dark .calculator {
+  border: 1px solid #6e6e6c69;
 }
 
 .toggle-container {
@@ -110,7 +108,6 @@ html {
 
 .screen {
   width: 21rem;
-  /* height: 7rem; */
   border: 1px solid rgb(171, 219, 231);
   border-bottom: 2px solid var(--color-light-purple);
   border-radius: 5px;
@@ -123,7 +120,7 @@ html {
 }
 
 .dark .screen {
-  border:4px solid blue;
+  border: 4px solid blue;
   background-color: transparent;
   box-shadow: none;
   border: none;
@@ -158,7 +155,7 @@ html {
   font-size: 2em;
   margin-top: px;
 }
-.operator:hover{
+.operator:hover {
   background-color: #e7c459;
 }
 .equal-sign {
