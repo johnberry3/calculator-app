@@ -24,4 +24,5 @@ When building this project, we learnt:
 
 ## Authors
 
+- [@johnberry3](https://github.com/johnberry3)
 - [@kenebebh}(https://www.github.com/kenebebh)
